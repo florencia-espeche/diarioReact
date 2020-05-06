@@ -6,6 +6,7 @@ body {
   background: #487279;
   font-family: "Noto Serif", serif;
   height: 100%;
+  margin: 0 30px 0;
 }
 
 .App-logo {

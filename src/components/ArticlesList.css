@@ -2,7 +2,7 @@
     margin: 0 auto 10px;
 }
 
-.articles-list--articles button {
+.articles-list--button {
     display: block;
     margin: 10px auto;
     padding: 20px;
@@ -10,4 +10,13 @@
     box-shadow: 3px 2px 1px rgba(0, 0, 0, 0.3);
     background-color: gainsboro;
     font-weight: bold;
+}
+
+@media only screen and (min-width: 1075px)  {
+    .articles-list--articles {
+        display: grid;
+        grid-gap: 15px;
+        grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+        grid-auto-rows: 220px;
+    }
 }
