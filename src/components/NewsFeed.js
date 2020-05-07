@@ -2,26 +2,30 @@
 import React, { useState, useEffect } from 'react';
 //import React, { Component } from 'react';
 import ArticlesList from './ArticlesList';
+import Loading from './Loading';
 import './NewsFeed.css';
 
 const App = (props) => {
-  const [articlesState, setArticlesState] = useState({ articles: []});
-  const [counterState, setCounterState ] = useState( 0 );
+  const [articlesState, setArticlesState] = useState({ articles: [] });
+  const [counterState, setCounterState] = useState(0);
+  const [loadingState, setLoadingState] = useState(true);
 
-  useEffect(()=>{
-    fetchInitialArticles();   
+  useEffect(() => {
+    fetchInitialArticles();
   }, []);
 
   async function fetchInitialArticles() {
     let currentState = articlesState.articles;
     const res = await fetch(`https://api.nytimes.com/svc/search/v2/articlesearch.json?page=${counterState}&api-key=a69e1cdbb16b4f23841c8f01be77f31a`);
     res.json()
-      .then((res) =>setArticlesState({ articles: currentState.concat(res.response.docs) }))
-      .then(setCounterState(counterState + 1));
+      .then((res) => setArticlesState({ articles: currentState.concat(res.response.docs) }))
+      .then(setCounterState(counterState + 1))
+      .then(setLoadingState(false));
   }
 
   return (
     <div className="App">
+      {loadingState ? <Loading /> : null}
       <ArticlesList value={articlesState.articles} onLoadClick={fetchInitialArticles} />
     </div>
   );

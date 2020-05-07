@@ -5,11 +5,12 @@
     justify-content: center;
     position: relative;
     top: 10px;
-    font-size: 18px;
 }
 
 .navbar--link {
     margin: 10px;
     text-decoration: none;
     color: #2f2f2f;
+    text-shadow: 2px 1px 0px #cccdbf;
+    font-size: 20px;
 }
