@@ -1,7 +1,7 @@
 import React from 'react';
 import './Card.css';
 
-const Card = ({ title, skills = [] }) => {
+const Card = ({skills = [] }) => {
 
     return (
         <div className="card--wrapper">

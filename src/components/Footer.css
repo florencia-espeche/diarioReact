@@ -1,6 +1,7 @@
 .footer--wrapper {
     align-items: center;
     justify-content: center;
+    text-align: center;
     display: flex;
     height: 60px;
     margin: 20px;
