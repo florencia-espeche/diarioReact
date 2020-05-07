@@ -1,8 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
+import Card from '../components/Card';
 
 const About = () => {
+    const [titleState] = useState('Tech Stack');
+    const [skillsState] = useState(['ECMAScript 6', 'React Hook', 'React Router', 'First Mobile', 'Metodologia BEM', 'Fetch']);
+
     return (
-        <h1>holaa</h1>
+        <Card title={titleState} skills={skillsState} />
     )
 }
 

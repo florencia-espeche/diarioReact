@@ -1,14 +1,16 @@
 
 import React from 'react';
 import './Header.css';
+import NavBar from './NavBar';
 
-const Nav = () => {
+const Header = () => {
   return (
-    <div className="nav--wrapper">
+    <header className="nav--wrapper">
       <h1 className="nav--header">NYT React</h1>
       <span className="nav--text">A React App for the New York Times</span>
-    </div>
+      <NavBar links={['Home', 'About']} />
+    </header>
   );
 }
 
-export default Nav;
+export default Header;
