@@ -19,7 +19,7 @@ const App = (props) => {
     const res = await fetch(`https://api.nytimes.com/svc/search/v2/articlesearch.json?page=${counterState}&api-key=a69e1cdbb16b4f23841c8f01be77f31a`);
     res.json()
       .then((res) => setArticlesState({ articles: currentState.concat(res.response.docs) }))
-      .then(setCounterState(counterState + 1))
+      .then(setCounterState(counterState => counterState + 1))
       .then(setLoadingState(false));
   }
 
