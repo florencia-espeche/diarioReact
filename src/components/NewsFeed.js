@@ -5,7 +5,7 @@ import ArticlesList from './ArticlesList';
 import Loading from './Loading';
 import './NewsFeed.css';
 
-const App = (props) => {
+const NewsFeed = (props) => {
   const [articlesState, setArticlesState] = useState({ articles: [] });
   const [counterState, setCounterState] = useState(0);
   const [loadingState, setLoadingState] = useState(true);
@@ -69,4 +69,4 @@ const App = (props) => {
   }
 
 }*/
-export default App;
+export default NewsFeed;

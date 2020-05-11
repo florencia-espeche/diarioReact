@@ -1,6 +1,6 @@
 import React, { useState, useContext } from 'react';
 import Card from '../components/Card';
-import UserContext from '../components/UserContext';
+import UserContext from '../context/UserContext';
 
 const About = () => {
     const user = useContext(UserContext);

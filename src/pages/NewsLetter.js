@@ -1,15 +1,15 @@
 import React, { useContext } from 'react'
-import NewsFeed from '../components/NewsFeed';
+import FormPanel from '../components/FormPanel';
 import UserContext from '../context/UserContext';
 
-const Home = () => {
+const NewsLetter = () => {
     const user = useContext(UserContext);
     return (
         <div>
             {user.name}
-            <NewsFeed />
+            <FormPanel />
         </div>
     )
 }
 
-export default Home;
+export default NewsLetter;

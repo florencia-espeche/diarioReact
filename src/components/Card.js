@@ -6,7 +6,7 @@ const Card = ({skills = [] }) => {
     return (
         <div className="card--wrapper">
             <div className="card--container">
-                {skills.map((item) => <div className = "card--box">{item}</div>)}
+                {skills.map((item,index) => <div key={index} className = "card--box">{item}</div>)}
             </div>
         </div>
     );
