@@ -7,6 +7,7 @@ const NewsLetter = () => {
     return (
         <div>
             {user.name}
+            Hola Mundo!!
             <FormPanel />
         </div>
     )

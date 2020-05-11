@@ -11,18 +11,20 @@ import { UserProvider } from './context/UserContext';
 const App = () => {
     const user = { name: 'flor', loggedIn: true }
     return (
-        <React.Fragment>
+        <React.Fragment><UserProvider value={user}>
             <Router>
+                <>
                 <Header />
                 <Switch>
-                    <UserProvider value={user}>
+                    
                         <Route path="/Home" component={Home} />
                         <Route path="/About" component={About} />
                         <Route path="/NewsLetter" commponent={NewsLetter} />
-                    </UserProvider>
+                    
                 </Switch>
                 <Footer />
-            </Router>
+                </>
+            </Router></UserProvider>
         </React.Fragment>
     )
 }
