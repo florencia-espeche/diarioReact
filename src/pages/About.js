@@ -1,5 +1,6 @@
 import React, { useState, useContext } from 'react';
 import Card from '../components/Card';
+import Layout from '../components/Layout';
 import UserContext from '../context/UserContext';
 
 const About = () => {
@@ -8,10 +9,10 @@ const About = () => {
     const [skillsState] = useState(['ECMAScript 6', 'Hooks', 'React Routing', 'First Mobile', 'BEM CSS', 'Asynchrony', 'Reactjs']);
 
     return (
-        <div>
+        <Layout>
             {user.name}
             <Card title={titleState} skills={skillsState} />
-        </div>
+        </Layout>
     )
 }
 
