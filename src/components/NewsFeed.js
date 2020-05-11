@@ -25,7 +25,7 @@ const App = (props) => {
 
   return (
     <div className="App">
-      {loadingState ? <Loading /> : null}
+      {loadingState && <Loading />}
       <ArticlesList value={articlesState.articles} onLoadClick={fetchInitialArticles} />
     </div>
   );
