@@ -13,11 +13,9 @@ const App = () => {
             <UserProvider value={user}>
                 <Router><>
                     <Switch>
-
                         <Route path="/Home" component={Home} />
                         <Route path="/About" component={About} />
-                        <Route path="/NewsLetter" commponent={NewsLetter} />
-
+                        <Route path="/NewsLetter" component={NewsLetter} />
                     </Switch></>
                 </Router>
             </UserProvider>

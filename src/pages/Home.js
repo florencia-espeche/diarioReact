@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
-import NewsFeed from '../components/NewsFeed';
-import Layout from '../components/Layout';
+import NewsFeed from '../components/apiCall/NewsFeed';
+import Layout from '../components/layout/Layout';
 import UserContext from '../context/UserContext';
 
 const Home = () => {
