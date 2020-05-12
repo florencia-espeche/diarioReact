@@ -1,6 +1,7 @@
 import React, { useContext } from 'react'
 import FormPanel from '../components/form/FormPanel';
 import Layout from '../components/layout/Layout';
+import Container from '../components/form/Container';
 import UserContext from '../context/UserContext';
 
 const NewsLetter = () => {
@@ -8,8 +9,9 @@ const NewsLetter = () => {
     return (
         <Layout>
             {user.name}
-            Hola Mundo!!
-            <FormPanel />
+            <Container>
+                 <FormPanel />
+            </Container>
         </Layout>
     )
 }
