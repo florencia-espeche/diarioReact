@@ -9,7 +9,7 @@ const FormConfirmation = () => {
 
     return (
         <div>
-            {send.isSubmit ? <p>Nice job!</p> : <p><em>Pssst... Go ahead and login...</em></p>}
+            {send.isSubmit ? <p>Nice job!</p> : null}
         </div>
     );
 }
