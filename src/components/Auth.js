@@ -2,6 +2,7 @@ import React, {useContext} from 'react';
 import {AuthContext} from '../context/AuthContext';
 import Container from '../components/form/Container';
 import './Auth.css';
+import Button from '../components/form/Button';
 
 const Auth = props => {
     const authContext = useContext(AuthContext);
@@ -15,9 +16,9 @@ const Auth = props => {
             <Container>
                 <h2>You are not authenticated!</h2>
                 <p>Please log in to continue.</p>
-                <button onClick = {loginHandler}>
+                <Button click = {() => loginHandler}>
                     Log In
-                </button>
+                </Button>
             </Container>
         </div>
     );
